@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Todus
+A todo app which comes with offline storage, important markers and dated todos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Open for suggestions :)
+
+Technologies used:
+1) React
+2) Tailwindcss
 
 ## Available Scripts
 
