@@ -35,14 +35,7 @@ function App() {
     },
   ]);
 
-  const [todos, setTodos] = useState([
-    {
-      name: "Eat Apples",
-      dueDate: "2021-12-01",
-      isDone: false,
-      isImportant: true,
-    },
-  ]);
+  const [todos, setTodos] = useState([]);
 
   useEffect(() => {
     const exsistingTodos = JSON.parse(localStorage?.getItem("todos"));

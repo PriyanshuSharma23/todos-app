@@ -6,7 +6,7 @@ import { todayDate } from "../main-section/date";
 function Todo({ todo, todos, setTodos }) {
   const date = todayDate();
   function isPassed(date) {
-    return todo.dueDate < date;
+    return (todo.dueDate < date);
   }
   function handleDONE() {
     let newTodos = todos.map((t) => {
@@ -40,7 +40,7 @@ function Todo({ todo, todos, setTodos }) {
   return (
     <div
       className={`bg-gray-200 p-3 w-full my-2 ${
-        isPassed(date) ? "border border-red-300" : ""
+        isPassed(date) && !todo.isDone ? "border border-red-300" : ""
       }`}
     >
       <div
@@ -60,7 +60,7 @@ function Todo({ todo, todos, setTodos }) {
         <button className="text-red-600 text-2xl" onClick={handleDELETE}>
           <RiDeleteBin6Line />
         </button>
-        <button className={`text-2xl ${isPassed(date) ? "text-red-500" : ""}`}>
+        <button className={`text-2xl ${isPassed(date) && !todo.isDone ? "text-red-500" : ""}`}>
           <span className={`font-bold`}> Due: </span>
           {todo.dueDate.replaceAll("-", "/")}{" "}
         </button>
