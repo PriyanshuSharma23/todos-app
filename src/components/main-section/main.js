@@ -11,7 +11,7 @@ function Main({ categories, todos, setTodos }) {
         if (category.selected) {
           return (
             <div key={category.id} className="w-full">
-              <div className="text-2xl font-bold text-center">
+              <div className="text-2xl font-extrabold text-center">
                 {category.name}
               </div>
 
